@@ -12,10 +12,21 @@
 int (*find_correct_func(const char *format))(va_list)
 {
         unsigned int i = 0;
-        code_f find_f[] = {{"c", print_char},{"s", print_string},{"i", print_int},
-		   {"d", print_dec},{"r", print_rev},{"b", print_bin},{"u", print_unsigned},
-		   {"o", print_octal},{"x", print_hex},{"X", print_HEX},{"R", print_rot13},
-	           {"S", print_S},{"p", print_p},{NULL, NULL}
+        code_f find_f[] = {
+		   {"c", print_char},
+		   {"s", print_string},
+          	   {"i", print_int},
+		   {"d", print_dec},
+		   {"r", print_rev},
+		   {"b", print_bin},
+		   {"u", print_unsigned},
+		   {"o", print_octal},
+		   {"x", print_hex},
+		   {"X", print_HEX},
+		   {"R", print_rot13},
+	           {"S", print_S},
+		   {"p", print_p},
+		   {NULL, NULL}
 		};
 
      while (find_f[i].sc)
